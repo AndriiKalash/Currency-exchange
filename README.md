@@ -1,3 +1,13 @@
+# Currency Rate App
+
+Welcome to the Currency Rate App! This React application allows users to check currency rates and perform currency conversions. It utilizes React, React Hooks, custom hooks, SCSS, and the Fetch API for querying currency rates.
+
+## Features
+
+- View the latest currency rates.
+- Perform currency conversion calculations.
+- User-friendly interface with React components.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
