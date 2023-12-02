@@ -106,21 +106,15 @@ body {
       &.active {
         background-color: #16b67f;
         color: #fff;
-        @media (max-width: 450px) {
-          background-color: inherit;
-          color: #000000;
-        }
       }
 
       select {
         border: none;
         outline: none;
+        width: 100%;
         background: transparent;
         &.active {
           color: #fff;
-          @media (max-width: 450px) {
-            color: #000000;
-          }
         }
       }
     }

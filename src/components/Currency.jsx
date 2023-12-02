@@ -3,6 +3,12 @@ import { defaultCurrencies } from './constants';
 
 export const Currency = ({ setCurrency, currency, getRate, setRate, data }) => {
   const [listCur, setListCur] = useState([]);
+  const getClassNameSelect = () => {
+    if (window.innerWidth <= 450 && currency !== 'UAH') {
+      return 'active';
+    }
+    return !defaultCurrencies.includes(currency) ? 'active' : '';
+  };
 
   useEffect(() => {
     const getListCurr = async () => {
@@ -27,9 +33,9 @@ export const Currency = ({ setCurrency, currency, getRate, setRate, data }) => {
           {cur}
         </li>
       ))}
-      <li className={!defaultCurrencies.includes(currency) ? 'active' : ''}>
+      <li className={getClassNameSelect()}>
         <select
-          className={!defaultCurrencies.includes(currency) ? 'active' : ''}
+          className={getClassNameSelect()}
           name="currency"
           value={currency}
           onChange={(e) => {
