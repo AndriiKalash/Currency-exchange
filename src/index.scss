@@ -11,12 +11,15 @@ body {
 }
 
 .App {
-  width: 1000px;
+  max-width: 1000px;
   margin: 100px auto;
   background-color: #fff;
   padding: 30px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   border-radius: 15px;
+  @media (max-width: 1020px) {
+    margin: 50px auto;
+  }
 }
 
 .header {
@@ -30,6 +33,15 @@ body {
     align-items: center;
     gap: 30px;
     padding: 0 20px;
+    @media (max-width: 450px) {
+      flex-direction: column;
+      gap: 0;
+      align-items: first baseline;
+    }
+  }
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    // display: block;
   }
 }
 
@@ -40,6 +52,11 @@ body {
   margin-top: 30px;
   border-radius: 15px;
   border-radius: 5px;
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
   .block {
     input {
@@ -64,6 +81,12 @@ body {
     border-radius: 5px;
     overflow: hidden;
 
+    li:not(:last-child):not(:first-child) {
+      @media (max-width: 450px) {
+        display: none;
+      }
+    }
+
     li {
       display: inline-flex;
       padding: 10px 20px;
@@ -83,6 +106,10 @@ body {
       &.active {
         background-color: #16b67f;
         color: #fff;
+        @media (max-width: 450px) {
+          background-color: inherit;
+          color: #000000;
+        }
       }
 
       select {
@@ -91,6 +118,9 @@ body {
         background: transparent;
         &.active {
           color: #fff;
+          @media (max-width: 450px) {
+            color: #000000;
+          }
         }
       }
     }
